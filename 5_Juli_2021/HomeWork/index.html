@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 Juli (Day1)</title>
+</head>
+<body>
+    <h1>Create Playlist</h1>
+    <form id="myform">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <br>
+            <input type="text" name="title" id="title">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="desc">Description</label>
+            <br>
+            <textarea type="text" name="desc" id="desc"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <div style="border: 2px solid black;background-color: pink; padding: 1em; margin: 0 auto; width: 30%;">
+        <img style="display: block; margin:0 auto;" src="data:image/png;base64,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">
+        <br>
+        <h1 id="trackTitle">Track Title</h1>
+        <!-- <p>title</p> -->
+        <h3 id="trackArtis">Artists:</h3>
+        <!-- <p>artist</p> -->
+        <h3 id="trackAlbum">Albums:</h3>
+        <!-- <p>albums</p> -->
+        <button type="button">Select</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
