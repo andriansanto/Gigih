@@ -4,8 +4,24 @@ import TitleComponent from './components/title/title';
 import gif from './components/data/apidata';
 
 function App() {
-  const data = gif;
-  console.log(data.title);
+  const LoopsData = gif.map((gif, index) => {
+    if(gif.rating === "g"){
+      return <div style={{
+        margin: "5 5"
+      }}>
+        <TitleComponent key={index} items={gif}></TitleComponent>
+        <ImgComponent key={index} items={gif}></ImgComponent>
+      </div>
+    }
+    else{
+      return console.log("Data Fetch not authorized");
+      // <p key={index} style={{
+      //   backgroundColor: "red",
+      //   borderRadius: "10px"
+      // }}>Data Fetch Not Authorized</p>
+    }
+  });
+
 
   return (
     <div className="App">
@@ -14,8 +30,9 @@ function App() {
           <input type="search"></input>
           <button>Search</button>
         </div>
-        <TitleComponent items={data}></TitleComponent>
-        <ImgComponent items={data}></ImgComponent>
+        <ul>
+          {LoopsData}
+        </ul>
       </header>
     </div>
   );
