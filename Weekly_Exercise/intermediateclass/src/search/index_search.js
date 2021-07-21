@@ -4,7 +4,7 @@ import Gif from "../gif/gif";
 const api= process.env.REACT_APP_GIPHY_KEY;
 
 console.log(process.env.REACT_APP_GIPHY_KEY);
-
+    
 class Search extends Component{
     state = {
         search: "",
