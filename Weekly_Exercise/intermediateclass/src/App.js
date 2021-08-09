@@ -2,6 +2,7 @@ import './App.css';
 import Search from './components/search/index_search';
 import Gif from './components/gif/gif';
 import React, { useEffect,useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 
 const api= process.env.REACT_APP_GIPHY_KEY;
 
@@ -12,6 +13,10 @@ function App(){
     const [result, setResult] = useState([]);
     const [search, setSearch] = useState("");
     
+    const search_text = useSelector(state => state.search_text)
+    const dispatch = useDispatch()
+
+
     useEffect(() => {
         getSearch(search);
     })
